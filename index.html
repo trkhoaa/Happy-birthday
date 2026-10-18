@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
-    <title>Gửi Hồng Lạc 💖</title>
+    <title>Gửi Bích Vân</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Dancing+Script:wght@600&family=Be+Vietnam+Pro:wght@300;400;600&display=swap&subset=vietnamese"
       rel="stylesheet"
@@ -448,7 +448,7 @@
       <div class="line l1" id="l1"></div>
       <div class="line l2" id="l2"></div>
       <div id="hint">✦ Có một thông điệp đang bay lạc... ✦</div>
-      <button id="btn">Giải mã 💌</button>
+      <button id="btn">Giải mã 🤓</button>
     </div>
 
     <div id="card">
@@ -471,10 +471,10 @@
     <script>
       const CFG = {
         l1: "CHÚC MỪNG 20/10",
-        l2: "HỒNG LẠC",
-        name: "Hồng Lạc",
+        l2: "BÍCH VÂN",
+        name: "Bích Vân",
         intro:
-          "Nhân ngày 20/10, chúc Hồng Lạc luôn xinh đẹp, rạng rỡ như đóa hồng đầu mùa. Mong mỗi ngày của bạn đều ngập tràn tiếng cười và thật nhiều yêu thương. 🌸",
+          "Nhân ngày 20/10, chúc Bích Vân luôn xinh đẹp, rạng rỡ như đóa hồng đầu mùa. Mong mỗi ngày của bạn đều ngập tràn tiếng cười và thật nhiều yêu thương. 🌸",
         wishes: [
           ["🌸", "Luôn xinh đẹp", "Rạng rỡ từ nụ cười đến trái tim."],
           ["💖", "Thật hạnh phúc", "Mỗi ngày đều có một niềm vui nhỏ."],
@@ -482,10 +482,10 @@
           ["🌹", "Được yêu thương", "Nhiều hơn bạn có thể đếm hết."],
         ],
         quote:
-          "Cảm ơn bạn vì đã xuất hiện và làm thế giới này dịu dàng hơn rất nhiều.",
-        sign: "— Một người luôn nghĩ đến bạn 🌹",
+          "",
+        sign: "",
       };
-      const POOL = "ABCDEFGHIKLMNOPQRSTUVXYĂÂÊÔƠƯ0123456789";
+      const POOL = "ABCDEFGHIKLMNOPQRSTUVXYAwAAEEOOOwUwあいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをんアイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン0123456789";
       const rnd = (a) =>
         Array.isArray(a) || typeof a === "string"
           ? a[Math.floor(Math.random() * a.length)]
@@ -609,7 +609,7 @@
         f.slot.classList.add("ok");
         sparkle(f.slot);
         if (++landed === total) {
-          $("hint").textContent = "Giải mã thành công 💖";
+          $("hint").textContent = "Giải mã thành công 🌹";
           heartStorm();
           setTimeout(showCard, 1800);
         }
@@ -627,7 +627,7 @@
         if (decoding) return;
         decoding = true;
         $("btn").style.display = "none";
-        $("hint").textContent = "Các chữ cái đang tìm về nhau... ✨";
+        $("hint").textContent = "Các chữ cái đang bắt đầu ghép lại.. ✨";
         let i = 0;
         flyers.forEach((f) => {
           if (f.real) {
@@ -682,7 +682,7 @@
         document.body.appendChild(b);
         setTimeout(() => b.remove(), 900);
       }
-      const HEARTS = ["❤", "💖", "💗", "💕", "💘", "🌸", "🌹", "💝"];
+      const HEARTS = ["❤", "🤓", "🍀", "🎉", "💐", "🌸", "🌹", "💝"];
       function heart() {
         const h = document.createElement("div");
         h.className = "heart";
@@ -737,7 +737,7 @@
         lt = n;
         const t = document.createElement("div");
         t.className = "trail";
-        t.textContent = rnd(["❤", "💖", "💗", "💕"]);
+        t.textContent = rnd(["❤", "💖", "💐", "🍀"]);
         t.style.cssText += `left:${e.clientX}px;top:${e.clientY}px;font-size:${R(10, 20)}px;--tx:${R(-30, 30)}px`;
         document.body.appendChild(t);
         setTimeout(() => t.remove(), 1100);
